@@ -23,7 +23,8 @@ beforeAll(() => {
   return;
 });
 
-//          a
+//           a
+//        /    \
 //      /       \
 //    b          c
 //   /  \       /  \
@@ -143,6 +144,9 @@ describe("6️⃣  Testing LCA for invalid nodes, nodes that are not present", (
 });
 
 describe("7️⃣  Testing LCA for empty nodes", () => {
+  test(`LCA of null and null is Error, two null node`, () => {
+    expect(LCA.findLCA(null, null)).toBe("Error");
+  });
   test(`LCA of " " and a is Error, one empty node`, () => {
     expect(LCA.findLCA(" ", "a")).toBe("Error");
   });
@@ -151,5 +155,66 @@ describe("7️⃣  Testing LCA for empty nodes", () => {
   });
   test(`LCA of "" and "" is Error, two empty nodes`, () => {
     expect(LCA.findLCA("", "")).toBe("Error");
+  });
+});
+
+describe("8️⃣  Testing LCA for numbers", () => {
+  beforeAll(() => {
+    var root1 = new Node(1);
+
+    var node1_2 = (root1.left = new Node(2));
+    var node1_3 = (root1.right = new Node(3));
+
+    var node1_4 = (node1_2.left = new Node(4));
+    var node1_5 = (node1_2.right = new Node(5));
+
+    var node1_6 = (node1_3.left = new Node(6));
+    var node1_7 = (node1_3.right = new Node(7));
+
+    var node1_8 = (node1_4.left = new Node(8));
+    var node1_9 = (node1_5.right = new Node(9));
+
+    var node1_10 = (node1_6.left = new Node(10));
+    var node1_11 = (node1_7.right = new Node(11));
+
+    LCA.setupRoot(root1);
+    return;
+  });
+
+  //            1
+  //         /    \
+  //       /       \
+  //      2         3
+  //    /  \       / \
+  //   4    5     6   7
+  //  /      \   /     \
+  // 8       9 10      11
+
+  test("LCA of 2 and 3 is 1", () => {
+    expect(LCA.findLCA(2, 3)).toBe(1);
+  });
+  test("LCA of 4 and 5 is 2", () => {
+    expect(LCA.findLCA(4, 5)).toBe(2);
+  });
+  test("LCA of 6 and 7 is 3", () => {
+    expect(LCA.findLCA(6, 7)).toBe(3);
+  });
+  test("LCA of 10 and 11 is 3", () => {
+    expect(LCA.findLCA(10, 11)).toBe(3);
+  });
+  test("LCA of 8 and 9 is 2", () => {
+    expect(LCA.findLCA(8, 9)).toBe(2);
+  });
+  test("LCA of 9 and 10 is 1", () => {
+    expect(LCA.findLCA(9, 10)).toBe(1);
+  });
+  test("LCA of 8 and 11 is 1", () => {
+    expect(LCA.findLCA(8, 11)).toBe(1);
+  });
+  test("LCA of 4 and 9 is 2", () => {
+    expect(LCA.findLCA(4, 9)).toBe(2);
+  });
+  test("LCA of 6 and 11 is 3", () => {
+    expect(LCA.findLCA(6, 11)).toBe(3);
   });
 });

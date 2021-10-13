@@ -8,9 +8,6 @@ function setupRoot(rootNode) {
   root = rootNode;
 }
 
-// const setupRoot = (rootNode) => {
-//   root = rootNode;
-// };
 
 // Finds the path from root node to given root of the tree.
 function findLCA(n1, n2) {
