@@ -1,0 +1,22 @@
+{
+  "name": "lca-nodejs",
+  "version": "1.0.0",
+  "description": "This is an implementation of LCA from geeksforgeeks.org",
+  "main": "LCA.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnkommala/LCA-NodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnkommala/LCA-NodeJS/issues"
+  },
+  "homepage": "https://github.com/johnkommala/LCA-NodeJS#readme",
+  "devDependencies": {
+    "jest": "^27.2.5"
+  }
+}
