@@ -12,4 +12,4 @@ the output looks like this
 
 # Unit Testing
 I have implemented unit test using a javascript framework called [jest](https://jestjs.io/). This is the report on my tests.
-![Screenshot 2021-10-13 at 02 07 12](https://user-images.githubusercontent.com/91032767/137049819-ace1282a-6214-4db4-8e1d-010e4e4d433d.png)
+![image](https://user-images.githubusercontent.com/91032767/137167640-5c4b7e29-0430-4d24-8bb0-583a612f8a64.png)
