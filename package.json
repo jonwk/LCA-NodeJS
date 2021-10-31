@@ -18,5 +18,8 @@
   "homepage": "https://github.com/johnkommala/LCA-NodeJS#readme",
   "devDependencies": {
     "jest": "^27.2.5"
+  },
+  "dependencies": {
+    "ancestor": "^0.1.3"
   }
 }
