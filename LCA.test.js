@@ -218,3 +218,18 @@ describe("8️⃣  Testing LCA for numbers", () => {
     expect(LCA.findLCA(6, 11)).toBe(3);
   });
 });
+
+describe("9️⃣ Testing LCA for Directed Acyclic Graphs(DAG)", () => {
+  test("LCA for DAG, DAG Class not created yet", () => {
+    expect(LCA.findLCA("a", "a")).toBe("a");
+  });
+  // test("LCA of b and b is b", () => {
+  //   expect(LCA.findLCA("b", "b")).toBe("b");
+  // });
+  // test("LCA of c and c is c", () => {
+  //   expect(LCA.findLCA("c", "c")).toBe("c");
+  // });
+  // test("LCA of d and d is d", () => {
+  //   expect(LCA.findLCA("d", "d")).toBe("d");
+  // });
+});
